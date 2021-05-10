@@ -1,5 +1,5 @@
 import { OrderSide, FundingType, OrderType } from '../types/trading';
-import { Period } from '../../rest/types/data';
+import { Period, PeriodNames } from '../../rest/types/data';
 
 // NOTE: the mapping for buy/sell is different for PrivateOrder and PublicTrade
 export const privateOrderSideFromProto: { [key: number]: OrderSide } = {
@@ -54,7 +54,7 @@ export const orderTypeToProto: { [key: string]: number } = {
   // settleposition: 12
 } as const;
 
-export const periodNames: { [key: string]: Period } = {
+export const periodNames: { [key in Period]: PeriodNames } = {
   '60': '1m',
   '180': '3m',
   '300': '5m',

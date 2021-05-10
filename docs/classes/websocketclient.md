@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.8](../README.md) › [WebSocketClient](websocketclient.md)
+[cw-sdk-node - v1.0.0-beta.9](../README.md) › [WebSocketClient](websocketclient.md)
 
 # Class: WebSocketClient
 
@@ -22,7 +22,10 @@
 
 * [connState](websocketclient.md#protected-connstate)
 * [subscriptions](websocketclient.md#subscriptions)
+* [captureRejectionSymbol](websocketclient.md#static-capturerejectionsymbol)
+* [captureRejections](websocketclient.md#static-capturerejections)
 * [defaultMaxListeners](websocketclient.md#static-defaultmaxlisteners)
+* [errorMonitor](websocketclient.md#static-errormonitor)
 
 ### Methods
 
@@ -52,12 +55,16 @@
 * [setMaxListeners](websocketclient.md#setmaxlisteners)
 * [state](websocketclient.md#state)
 * [listenerCount](websocketclient.md#static-listenercount)
+* [on](websocketclient.md#static-on)
+* [once](websocketclient.md#static-once)
 
 ## Constructors
 
 ###  constructor
 
 \+ **new WebSocketClient**(`opts`: [WebSocketOpts](../interfaces/websocketopts.md)): *[WebSocketClient](websocketclient.md)*
+
+*Overrides void*
 
 *Defined in [src/websocket/WebSocketClient.ts:64](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L64)*
 
@@ -91,13 +98,53 @@ ___
 
 ___
 
+### `Static` captureRejectionSymbol
+
+▪ **captureRejectionSymbol**: *keyof symbol*
+
+*Inherited from void*
+
+Defined in node_modules/@types/node/events.d.ts:38
+
+___
+
+### `Static` captureRejections
+
+▪ **captureRejections**: *boolean*
+
+*Inherited from void*
+
+Defined in node_modules/@types/node/events.d.ts:44
+
+Sets or gets the default captureRejection value for all emitters.
+
+___
+
 ### `Static` defaultMaxListeners
 
 ▪ **defaultMaxListeners**: *number*
 
 *Inherited from void*
 
-Defined in node_modules/@types/node/events.d.ts:19
+Defined in node_modules/@types/node/events.d.ts:45
+
+___
+
+### `Static` errorMonitor
+
+▪ **errorMonitor**: *keyof symbol*
+
+*Inherited from void*
+
+Defined in node_modules/@types/node/events.d.ts:37
+
+This symbol shall be used to install a listener for only monitoring `'error'`
+events. Listeners installed using this symbol are called before the regular
+`'error'` listeners are called.
+
+Installing a listener using this symbol does not change the behavior once an
+`'error'` event is emitted, therefore the process will still crash if no
+regular `'error'` listener is installed.
 
 ## Methods
 
@@ -107,9 +154,7 @@ Defined in node_modules/@types/node/events.d.ts:19
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:21
+Defined in node_modules/@types/node/globals.d.ts:569
 
 **Parameters:**
 
@@ -155,9 +200,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:33
+Defined in node_modules/@types/node/globals.d.ts:579
 
 **Parameters:**
 
@@ -192,9 +235,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:34
+Defined in node_modules/@types/node/globals.d.ts:584
 
 **Returns:** *Array‹string | symbol›*
 
@@ -206,9 +247,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:30
+Defined in node_modules/@types/node/globals.d.ts:576
 
 **Returns:** *number*
 
@@ -230,9 +269,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:35
+Defined in node_modules/@types/node/globals.d.ts:580
 
 **Parameters:**
 
@@ -250,9 +287,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:31
+Defined in node_modules/@types/node/globals.d.ts:577
 
 **Parameters:**
 
@@ -270,9 +305,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:27
+Defined in node_modules/@types/node/globals.d.ts:573
 
 **Parameters:**
 
@@ -298,9 +331,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:22
+Defined in node_modules/@types/node/globals.d.ts:570
 
 **Parameters:**
 
@@ -402,9 +433,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:23
+Defined in node_modules/@types/node/globals.d.ts:571
 
 **Parameters:**
 
@@ -430,9 +459,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:24
+Defined in node_modules/@types/node/globals.d.ts:582
 
 **Parameters:**
 
@@ -458,9 +485,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:25
+Defined in node_modules/@types/node/globals.d.ts:583
 
 **Parameters:**
 
@@ -486,9 +511,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:32
+Defined in node_modules/@types/node/globals.d.ts:578
 
 **Parameters:**
 
@@ -506,9 +529,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:28
+Defined in node_modules/@types/node/globals.d.ts:574
 
 **Parameters:**
 
@@ -526,9 +547,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:26
+Defined in node_modules/@types/node/globals.d.ts:572
 
 **Parameters:**
 
@@ -570,9 +589,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/@types/node/events.d.ts:29
+Defined in node_modules/@types/node/globals.d.ts:575
 
 **Parameters:**
 
@@ -600,7 +617,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@types/node/events.d.ts:18
+Defined in node_modules/@types/node/events.d.ts:26
 
 **`deprecated`** since v4.0.0
 
@@ -612,3 +629,43 @@ Name | Type |
 `event` | string &#124; symbol |
 
 **Returns:** *number*
+
+___
+
+### `Static` on
+
+▸ **on**(`emitter`: EventEmitter, `event`: string): *AsyncIterableIterator‹any›*
+
+*Inherited from void*
+
+Defined in node_modules/@types/node/events.d.ts:23
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`emitter` | EventEmitter |
+`event` | string |
+
+**Returns:** *AsyncIterableIterator‹any›*
+
+___
+
+### `Static` once
+
+▸ **once**(`emitter`: NodeEventTarget, `event`: string | symbol): *Promise‹any[]›*
+
+*Inherited from void*
+
+*Overrides void*
+
+Defined in node_modules/@types/node/events.d.ts:21
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`emitter` | NodeEventTarget |
+`event` | string &#124; symbol |
+
+**Returns:** *Promise‹any[]›*

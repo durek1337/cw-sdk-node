@@ -1,6 +1,6 @@
-[cw-sdk-node - v1.0.0-beta.8](README.md)
+[cw-sdk-node - v1.0.0-beta.9](README.md)
 
-# cw-sdk-node - v1.0.0-beta.8
+# cw-sdk-node - v1.0.0-beta.9
 
 ## Index
 
@@ -91,6 +91,7 @@
 * [PairBrief](README.md#pairbrief)
 * [PairDetails](README.md#pairdetails)
 * [Period](README.md#period)
+* [PeriodNames](README.md#periodnames)
 * [Price](README.md#price)
 * [PriceSummary](README.md#pricesummary)
 * [Prices](README.md#prices)
@@ -205,7 +206,7 @@ ___
 
 Ƭ **CandleData**: *object*
 
-*Defined in [src/rest/types/data.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L138)*
+*Defined in [src/rest/types/data.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L154)*
 
 #### Type declaration:
 
@@ -215,7 +216,7 @@ ___
 
 Ƭ **CandleDataRaw**: *[number, number, number, number, number, number, number]*
 
-*Defined in [src/rest/types/data.ts:137](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L137)*
+*Defined in [src/rest/types/data.ts:153](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L153)*
 
 CandleData is an array of numbers in this order:
 [ CloseTime, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume, QuoteVolume ]
@@ -298,7 +299,7 @@ ___
 
 Ƭ **LiquiditySide**: *object*
 
-*Defined in [src/rest/types/data.ts:119](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L119)*
+*Defined in [src/rest/types/data.ts:135](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L135)*
 
 #### Type declaration:
 
@@ -362,7 +363,7 @@ ___
 
 Ƭ **MarketOHLC**: *object*
 
-*Defined in [src/rest/types/data.ts:152](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L152)*
+*Defined in [src/rest/types/data.ts:168](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L168)*
 
 #### Type declaration:
 
@@ -372,7 +373,7 @@ ___
 
 Ƭ **MarketOHLCRaw**: *object*
 
-*Defined in [src/rest/types/data.ts:148](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L148)*
+*Defined in [src/rest/types/data.ts:164](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L164)*
 
 #### Type declaration:
 
@@ -382,7 +383,7 @@ ___
 
 Ƭ **MarketOrderBookLiquidity**: *object*
 
-*Defined in [src/rest/types/data.ts:128](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L128)*
+*Defined in [src/rest/types/data.ts:144](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L144)*
 
 #### Type declaration:
 
@@ -410,7 +411,7 @@ ___
 
 Ƭ **OHLCOptions**: *object*
 
-*Defined in [src/rest/types/data.ts:164](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L164)*
+*Defined in [src/rest/types/data.ts:180](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L180)*
 
 #### Type declaration:
 
@@ -472,9 +473,17 @@ ___
 
 ###  Period
 
-Ƭ **Period**: *"1m" | "3m" | "5m" | "15m" | "30m" | "1h" | "2h" | "4h" | "6h" | "12h" | "1d" | "3d" | "1w_Thursday" | "1w_Monday"*
+Ƭ **Period**: *"60" | "180" | "300" | "900" | "1800" | "3600" | "7200" | "14400" | "21600" | "43200" | "86400" | "259200" | "604800" | "604800_Monday"*
 
 *Defined in [src/rest/types/data.ts:103](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L103)*
+
+___
+
+###  PeriodNames
+
+Ƭ **PeriodNames**: *"1m" | "3m" | "5m" | "15m" | "30m" | "1h" | "2h" | "4h" | "6h" | "12h" | "1d" | "3d" | "1w_Thursday" | "1w_Monday"*
+
+*Defined in [src/rest/types/data.ts:119](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L119)*
 
 ___
 
@@ -502,7 +511,7 @@ ___
 
 Ƭ **Prices**: *object*
 
-*Defined in [src/rest/types/data.ts:156](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L156)*
+*Defined in [src/rest/types/data.ts:172](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L172)*
 
 #### Type declaration:
 
@@ -525,7 +534,7 @@ ___
 
 Ƭ **Summaries**: *object*
 
-*Defined in [src/rest/types/data.ts:160](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L160)*
+*Defined in [src/rest/types/data.ts:176](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/data.ts#L176)*
 
 #### Type declaration:
 
@@ -838,8 +847,6 @@ ___
 *Defined in [src/websocket/proto/constants.ts:57](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/proto/constants.ts#L57)*
 
 #### Type declaration:
-
-* \[ **key**: *string*\]: [Period](README.md#period)
 
 ___
 

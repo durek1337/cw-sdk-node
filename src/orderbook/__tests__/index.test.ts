@@ -109,7 +109,7 @@ describe('index.ts tests', () => {
         expect(mockUpdater.delta.seqNum).toBe(12345);
         done();
       };
-      mockStreamClient.onMarketUpdate(Arg.any).mimicks(callbackChecker);
+      mockStreamClient.onMarketUpdate(Arg.any()).mimicks(callbackChecker);
       mockRestClient.getMarket(123).returns(getMarketPromise());
 
       await createOrderBookWatcher(123, mockStreamClient, mockRestClient);
@@ -128,7 +128,7 @@ describe('index.ts tests', () => {
         expect(mockUpdater.applyDelta.mock.calls.length).toBe(0);
         done();
       };
-      mockStreamClient.onMarketUpdate(Arg.any).mimicks(callbackChecker);
+      mockStreamClient.onMarketUpdate(Arg.any()).mimicks(callbackChecker);
       mockRestClient.getMarket(123).returns(getMarketPromise());
 
       await createOrderBookWatcher(123, mockStreamClient, mockRestClient);

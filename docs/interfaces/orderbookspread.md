@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.8](../README.md) › [OrderBookSpread](orderbookspread.md)
+[cw-sdk-node - v1.0.0-beta.9](../README.md) › [OrderBookSpread](orderbookspread.md)
 
 # Interface: OrderBookSpread
 

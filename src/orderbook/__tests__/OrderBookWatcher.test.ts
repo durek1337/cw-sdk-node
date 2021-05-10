@@ -76,7 +76,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(null);
         done();
       };
-      mockUpdater.onOrderBookUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onOrderBookUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onUpdate((marketID: number) => {
         expect(marketID).toEqual(123);
         return;
@@ -94,7 +94,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(snapshot);
         done();
       };
-      mockUpdater.onOrderBookUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onOrderBookUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onUpdate((_, snapshot: OrderBookSnapshot) => {
         expect(snapshot).toEqual(snapshot);
         return;
@@ -141,7 +141,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(fakeOrderBookStateInSync);
         done();
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange(() => {
         expect(true).toBeTruthy();
         return;
@@ -154,7 +154,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(fakeOrderBookStateNotInSync);
         done();
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange(() => {
         expect(true).toBeTruthy();
         return;
@@ -168,7 +168,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(fakeOrderBookStateInSync);
         done();
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange(() => {
         expect(true).toBeTruthy();
         return;
@@ -182,7 +182,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(fakeOrderBookStateNotInSync);
         done();
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange(() => {
         expect(true).toBeTruthy();
         return;
@@ -194,7 +194,7 @@ describe('OrderBookWatcher.js tests', () => {
       const callbackChecker = (callback: (orderBookState: OrderBookState) => void): void => {
         callback(fakeOrderBookStateInSync);
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange((marketID: number) => {
         expect(marketID).toEqual(123);
         done();
@@ -207,7 +207,7 @@ describe('OrderBookWatcher.js tests', () => {
       const callbackChecker = (callback: (orderBookState: OrderBookState) => void): void => {
         callback(fakeOrderBookStateInSync);
       };
-      mockUpdater.onStateUpdate(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onStateUpdate(Arg.any()).mimicks(callbackChecker);
       obw.onSyncStatusChange((_, inSync: boolean) => {
         expect(inSync).toEqual(true);
         done();
@@ -241,7 +241,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(null);
         done();
       };
-      mockUpdater.onError(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onError(Arg.any()).mimicks(callbackChecker);
       obw.onError((marketID: number) => {
         expect(marketID).toEqual(123);
         return;
@@ -255,7 +255,7 @@ describe('OrderBookWatcher.js tests', () => {
         callback(error);
         done();
       };
-      mockUpdater.onError(Arg.any).mimicks(callbackChecker);
+      mockUpdater.onError(Arg.any()).mimicks(callbackChecker);
       obw.onError((_, err: Error) => {
         expect(err).toEqual(error);
         return;
