@@ -39,7 +39,7 @@ function loadCredentials(creds: Credentials, ctype: CredentialsType): void {
   }
 
   try {
-    const credsFile = yaml.safeLoad(fs.readFileSync(credsPath, 'utf8'));
+    const credsFile = yaml.safeLoad(fs.readFileSync(credsPath, 'utf8')) as any;
     creds.apiKey = credsFile.api_key;
     creds.secretKey = credsFile.secret_key;
     if (ctype === 'stream' && credsFile.stream_url) {
