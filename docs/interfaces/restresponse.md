@@ -1,6 +1,6 @@
-[cw-sdk-node - v1.0.0-beta.8](../README.md) › [RESTResponse](restresponse.md)
+[cw-sdk-node - v1.0.0-beta.9](../README.md) › [RESTResponse](restresponse.md)
 
-# Interface: RESTResponse <**T**>
+# Interface: RESTResponse ‹**T**›
 
 ## Type parameters
 
