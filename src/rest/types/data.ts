@@ -101,20 +101,21 @@ export type Trade = {
 };
 
 export type Period =
-  | '1m'
-  | '3m'
-  | '5m'
-  | '15m'
-  | '30m'
-  | '1h'
-  | '2h'
-  | '4h'
-  | '6h'
-  | '12h'
-  | '1d'
-  | '3d'
-  | '1w_Thursday'
-  | '1w_Monday';
+  | "60"            // '1m'
+  | "180"           // '3m'
+  | "300"           // '5m'
+  | "900"           // '15m'
+  | "1800"          // '30m'
+  | "3600"          // '1h'
+  | "7200"          // '2h'
+  | "14400"         // '4h'
+  | "21600"         // '6h'
+  | "43200"         // '12h'
+  | "86400"         // '1d'
+  | "259200"        // '3d'
+  | "604800"        // '1w_Thursday'
+  | "604800_Monday" // '1w_Monday';
+
 
 export type LiquiditySide = {
   base: {
@@ -162,7 +163,7 @@ export type Summaries = {
 };
 
 export type OHLCOptions = {
-  before?: string,
-  after?: string,
-  periods?: string
+  before?: string;
+  after?: string;
+  periods?: string;
 };
