@@ -25842,4 +25842,6 @@ $root.ProtobufStream = (function() {
     return ProtobufStream;
 })();
 
+var ProtobufClient = $root.ProtobufClient
+$root.ProtobufClient = ProtobufClient
 module.exports = $root;
