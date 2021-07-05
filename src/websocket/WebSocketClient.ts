@@ -11,7 +11,10 @@ import {
   StateDisconnected,
   StateWaitingToReconnect
 } from './constants';
-import {ProtobufClient, ProtobufStream} from './modules/proto/index';
+
+
+import {ProtobufClient} from './modules/proto/index.d';
+import {ProtobufStream} from './modules/proto/index';
 import { ReconnectOpts, WebSocketOpts } from './types/client';
 import { symbolString } from '../util/helpers';
 import logger from '../util/logger';
