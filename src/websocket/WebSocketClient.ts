@@ -13,7 +13,6 @@ import {
 } from './constants';
 
 
-import {ProtobufClient} from './modules/proto/index.d';
 import {ProtobufStream} from './modules/proto/index';
 import { ReconnectOpts, WebSocketOpts } from './types/client';
 import { symbolString } from '../util/helpers';
