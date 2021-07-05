@@ -11,12 +11,14 @@ import {
   StateDisconnected,
   StateWaitingToReconnect
 } from './constants';
-import { ProtobufStream, ProtobufClient } from './modules/proto/index';
+import ProtoObject, {ProtobufStream} from './modules/proto/index';
 import { ReconnectOpts, WebSocketOpts } from './types/client';
 import { symbolString } from '../util/helpers';
 import logger from '../util/logger';
 import version from '../version';
 import { errConnNotReady } from './errors';
+
+const ProtobufClient = ProtoObject.ProtobufClient
 
 // These will be overwritten by the opts object passed to the constructor
 const defaultReconnectOpts: ReconnectOpts = {
