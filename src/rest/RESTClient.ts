@@ -46,7 +46,7 @@ export class RESTClient {
     return new URL(relativeRoute, this.apiRoute).href;
   }
 
-  private async getRestData<T>(
+  public async getRestData<T>(
     relativeRoute: string,
     params?: string | { [key: string]: string }
   ): Promise<T> {
